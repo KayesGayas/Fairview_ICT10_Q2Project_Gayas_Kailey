@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <title>Drill 2 | School Club Members</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url(https://i.pinimg.com/736x/a3/8e/a5/a38ea5865e40f9d0ffea45b34a95af37.jpg);
+            color: #333;
+        }
+
+        header {
+            background-color: #301044;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #301044;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #D9B8F0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #00000020;
+        }
+
+        h2 {
+            color: #4B2068;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .description {
+            text-align: center;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .members {
+            background-color: #E9DDF2;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #4B2068;
+        }
+
+        .grade-section {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .grade-section h3 {
+            color: #4B2068;
+            margin-bottom: 10px;
+        }
+
+        .grade-section ul {
+            padding-left: 25px;
+            line-height: 1.8;
+        }
+
+        .count {
+            text-align: center;
+            font-weight: bold;
+            color: #4B2068;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .add-member {
+            background-color: #E9DDF2;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+            border-left: 5px solid #4B2068;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        }
+
+        button {
+            background-color: #4B2068;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #301044;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #301044;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>School Club Members</h1>
+        <p>Drill 2 | ICT 10</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Homepage</a>
+        <a href="element_checker.html">Element Checker</a>
+        <a href="club_members.html">School Club Members</a>
+        <a href="meet_the_creator.html">Meet the Creator</a>
+    </nav>
+
+    <div class="container">
+
+        <h2>Club Members Directory</h2>
+        <div class="members">
+            <p class="count">Total Members: <span id="member-count">20</span></p>
+            <div id="result-box">
+                <p>Loading club members...</p>
+            </div>
+        </div>
+        <div class="add-member">
+            <h2>Add a New Member</h2>
+            <label for="firstname"><strong>First Name:</strong></label>
+            <input type="text" id="firstname" placeholder="Enter first name">
+            <label for="lastname"><strong>Last Name:</strong></label>
+            <input type="text" id="lastname" placeholder="Enter last name">
+            <button py-click="verify">Add Member</button>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <br><br>
+
+    <footer>
+        <p>Made by Kailey Gayas | ICT 10 Student Showcase 2026</p>
+    </footer>
+
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
